@@ -34,6 +34,7 @@ class Downloader(object):
 
     def __init__(self, urls):
         self.urls = urls
+
         self._htmls = []
 
     async def download_single_page(self, url):

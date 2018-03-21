@@ -28,8 +28,17 @@ def get_proxy():
     Get a proxy
     """
     conn = get_conn()
-    return conn.pop()
+    # return conn.pop()
+    return conn.get_new()
 
+@app.route('/pop')
+def pop_proxy():
+    """
+    删除并获取一个代理
+    :return:
+    """
+    conn = get_conn()
+    return conn.pop()
 
 @app.route('/count')
 def get_counts():
